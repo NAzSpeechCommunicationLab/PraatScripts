@@ -1,7 +1,8 @@
 ###################
 # 
-# Search the COSMIL data for a list of items and extracts acoustic information on those items.
-# Created by bvt Sep. 2020
+#' Search the COSMIL data for a list of items and extracts acoustic information on those items.
+#'
+#' Created by bvt Sep. 2020
 #
 #############
 
@@ -149,9 +150,8 @@ Create Strings as file list... list 'directory$''slash$'*.wav
 
 echo C'est finis!
 
-# @speechRate
-# Calculate the 3sec speech rate based on number of vowels in the window. Also outputs average speaker rate over the whole file. Procedure assumes stress is marked using ARPABET.
-# Requires start = starting boundary of the segment of interest, end = ending boundary of the segment of interest, segTier = the segment level tier, wordTier = word level tier.
+#' Calculate the 3sec speech rate based on number of vowels in the window. Also outputs average speaker rate over the whole file. Procedure assumes stress is marked using ARPABET.
+#' Requires start = starting boundary of the segment of interest, end = ending boundary of the segment of interest, segTier = the segment level tier, wordTier = word level tier.
 procedure speechRate: .start .end .segTier .wordTier
 	start3 = start-3
 	end3 = end+3
