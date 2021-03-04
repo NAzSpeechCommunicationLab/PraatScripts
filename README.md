@@ -1,3 +1,6 @@
-# COSMIL_hes_extractor
+# Praat Scripts
 
-This is a praat script written to extract UM and UH from the COSMIL database. It makes use of procedures for extracting formant values, pitch, intensity, and speech rate.
+Instructions for adding scripts to the lab GitHub
+
+
+
