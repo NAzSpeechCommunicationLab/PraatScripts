@@ -1,5 +1,5 @@
 ###################
-#
+# 
 # Search the COSMIL data for a list of items and extracts acoustic information on those items.
 # Created by bvt Sep. 2020
 #
@@ -149,13 +149,15 @@ Create Strings as file list... list 'directory$''slash$'*.wav
 
 echo C'est finis!
 
-#Calculate the 3sec speech rate based on number of vowels in 
-procedure speechRate: .start .end .segInterval .wordInterval
+# @speechRate
+# Calculate the 3sec speech rate based on number of vowels in the window. Also outputs average speaker rate over the whole file. Procedure assumes stress is marked using ARPABET.
+# Requires start = starting boundary of the segment of interest, end = ending boundary of the segment of interest, segTier = the segment level tier, wordTier = word level tier.
+procedure speechRate: .start .end .segTier .wordTier
 	start3 = start-3
 	end3 = end+3
 	dur6 = end3-start3
-	intStart3 = Get interval at time: wordInterval, start3
-	intEnd3 = Get interval at time: wordInterval, end3
+	intStart3 = Get interval at time: wordTier, start3
+	intEnd3 = Get interval at time: wordTier, end3
 	numInt1 = intEnd3-intStart3
 	segRate6 = numInt1/dur6
 	srTG = Extract part: 'start3', 'end3', "no"
@@ -167,7 +169,7 @@ procedure speechRate: .start .end .segInterval .wordInterval
 	syllRate6 = vowelNum/dur6
 	select TextGrid 'grid$'
 	#Speaker Rate
-	numInt11 = Get number of intervals... segInterval
+	numInt11 = Get number of intervals... segTier
 	  vowelA0 = Count intervals where: 1, "ends with", "0"
 	  vowelA1 = Count intervals where: 1, "ends with", "1"
 	  vowelA2 = Count intervals where: 1, "ends with", "2"
