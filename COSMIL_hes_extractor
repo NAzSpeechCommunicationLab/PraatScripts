@@ -1,8 +1,5 @@
 ###################
 #
-# Search the Buckeye Corpus for a listof provided words and extracts the words for later analysis with a pad of 100ms on each side.
-# Created by bvt Aug. 2011
-#
 # Search the COSMIL data for a list of items and extracts acoustic information on those items.
 # Created by bvt Sep. 2020
 #
@@ -14,10 +11,8 @@ form Give the parameters for the search and extract
    comment The path of the directory - choose from list:
     optionmenu Directory: 1
         option Choose from list
-      	option G:\Shared drives\APhL Wiki\Students\Morin_Gabrielle\COSMIL_RecordingsAndAlignments
-      	option G:\Shared drives\APhL Wiki\Students\Morin_Gabrielle\COSMIL_RecordingsAndAlignments\test
-		option /Users/gabriellemorin/Documents/Ling 475/test1
-		option /Users/gabriellemorin/Documents/COSMIL_hes_dataset
+      	option G:\location\COSMIL_RecordingsAndAlignments\test
+      	option /Users/location/COSMIL_hes_dataset
 #   comment The path for the wordlist file:
 #    text Wordlist D:\Buckeye_Corpus\irreglist.txt
    comment Specify the slash direction "\" for Windows and "/" for everything else.
