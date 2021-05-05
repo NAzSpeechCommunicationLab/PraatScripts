@@ -1,5 +1,6 @@
 # A TextGrid object needs to be selected in the Object list.
 #
+#
 # This script is distributed under the GNU General Public License.
 # Copyright 12.3.2002 Mietta Lennes
 #
